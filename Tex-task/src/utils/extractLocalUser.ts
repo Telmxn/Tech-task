@@ -1,7 +1,6 @@
 import { IUser } from "../types/user";
 
 export const extractLocalUser = (user: IUser) => ({
-  id: user.id,
   name: user.name,
   email: user.email,
   nickname: user.nickname,

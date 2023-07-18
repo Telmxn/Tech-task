@@ -5,12 +5,17 @@
   text-align: center;
 }
 .users > button {
+  transition: all 0.3s;
   display: inline-block;
   width: 95%;
   margin: 10px 0;
   padding: 7px;
   border: 1px solid #cfcfcf;
   background-color: transparent;
-  cursor: pointer;
   border-radius: 5px;
+}
+.users > button:hover {
+  transition: all 0.3s;
+  background-color: #3b3b3b;
+  color: white;
 }

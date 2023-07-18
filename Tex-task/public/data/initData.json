@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "phone": "902-738-3242",
     "name": "Geordan Aaryn",
     "nickname": "@geordanaaryn",
@@ -9,7 +8,6 @@
     "photo": "1.jpg"
   },
   {
-    "id": 2,
     "phone": "902-782-3286",
     "name": "Brazil Izair",
     "nickname": "@brazilizair",
@@ -18,7 +16,6 @@
     "photo": "2.jpg"
   },
   {
-    "id": 3,
     "phone": "902-739-3333",
     "name": "Selman Winston",
     "nickname": "@selmanwinston",
@@ -27,7 +24,6 @@
     "photo": "3.jpg"
   },
   {
-    "id": 4,
     "phone": "902-784-3378",
     "name": "Kaine Dutch",
     "nickname": "@kainedutch",
@@ -36,7 +32,6 @@
     "photo": "4.jpg"
   },
   {
-    "id": 5,
     "phone": "902-740-3426",
     "name": "Kerby Linton",
     "nickname": "@kerbylinton",
@@ -45,7 +40,6 @@
     "photo": "5.jpg"
   },
   {
-    "id": 6,
     "phone": "902-786-3472",
     "name": "Gilad Delvon",
     "nickname": "@giladdelvon",
@@ -54,7 +48,6 @@
     "photo": "6.jpg"
   },
   {
-    "id": 7,
     "phone": "902-741-3521",
     "name": "Augusto Castor",
     "nickname": "@augustocastor",
@@ -63,7 +56,6 @@
     "photo": "7.jpg"
   },
   {
-    "id": 8,
     "phone": "902-788-3568",
     "name": "Zian Khyre",
     "nickname": "@ziankhyre",
@@ -72,7 +64,6 @@
     "photo": "8.jpg"
   },
   {
-    "id": 9,
     "phone": "902-742-3618",
     "name": "Sheldon Neiko",
     "nickname": "@sheldonneiko",
@@ -81,7 +72,6 @@
     "photo": "9.jpg"
   },
   {
-    "id": 10,
     "phone": "902-790-3666",
     "name": "Berenger Altay",
     "nickname": "@berengeraltay",

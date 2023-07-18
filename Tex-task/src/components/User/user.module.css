@@ -31,9 +31,14 @@
   color: #505b6c;
 }
 .user button {
+  transition: all 0.3s;
   padding: 7px;
   border: 1px solid #cfcfcf;
   background-color: transparent;
-  cursor: pointer;
   border-radius: 5px;
+}
+.user button:hover {
+  transition: all 0.3s;
+  background-color: #3b3b3b;
+  color: white;
 }
