@@ -1,0 +1,16 @@
+.users {
+  width: 30%;
+  margin: 100px auto;
+  max-width: 350px;
+  text-align: center;
+}
+.users > button {
+  display: inline-block;
+  width: 95%;
+  margin: 10px 0;
+  padding: 7px;
+  border: 1px solid #cfcfcf;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+}
