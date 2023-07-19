@@ -3,6 +3,7 @@
   margin: 100px auto;
   max-width: 350px;
   text-align: center;
+  min-width: 300px;
 }
 .users > button {
   transition: all 0.3s;
