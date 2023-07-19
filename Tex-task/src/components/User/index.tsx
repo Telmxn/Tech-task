@@ -4,7 +4,7 @@ const User = (props: {
   name: string;
   nickname: string;
   photo: string;
-  showUser: any;
+  showUser: (nickname: string) => void;
 }) => {
   const { name, nickname, photo, showUser } = props;
   return (

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import style from "./users.module.css";
 import { getUsers } from "../../store/actions/userThunk";
@@ -8,7 +9,7 @@ import UserDetail from "../UserDetail";
 import { extractLocalUser } from "../../utils/extractLocalUser";
 import { isUser } from "../../utils/typeGuards";
 
-const Users: React.FC<IUser[]> = () => {
+const Users = () => {
   const [showAll, setShowAll] = useState(false);
   const [user, setUser] = useState<IUser | null>(null);
   const { users } = useAppSelector((state) => state.users);
@@ -26,7 +27,6 @@ const Users: React.FC<IUser[]> = () => {
       extractLocalUser(newUser);
     }
     newUser && setUser(newUser);
-    console.log(newUser);
   };
 
   return (

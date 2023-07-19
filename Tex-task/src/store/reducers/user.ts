@@ -1,10 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { getUsers } from "../actions/userThunk";
 import { IUser } from "../../types/user";
 
 const initialState = {
-  users: [],
+  users: [] as IUser[],
   status: "nothing",
   error: "",
 };
@@ -16,7 +15,7 @@ export const userSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getUsers.fulfilled, (state, action) => {
-        state.users = action.payload;
+        state.users = action.payload as IUser[];
         state.status = "fullfilled";
       })
       .addCase(getUsers.pending, (state) => {
@@ -25,7 +24,7 @@ export const userSlice = createSlice({
       .addCase(getUsers.rejected, (state, action) => {
         state.users = [];
         state.status = "error";
-        state.error = action.payload;
+        state.error = action.payload as string;
       });
   },
 });

@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import { IUser } from "../../types/user";
 import style from "./userDetail.module.css";
 
 const UserDetail = (props: {
@@ -7,12 +7,13 @@ const UserDetail = (props: {
   position: string;
   phone: string;
   email: string;
-  setUser: any;
+  setUser: React.Dispatch<React.SetStateAction<IUser | null>>;
 }) => {
   const { name, photo, position, phone, email, setUser } = props;
 
-  const closeDetail = (e) => {
-    e.target.id == "overlay" && setUser(null);
+  const closeDetail = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const target = e.target as HTMLDivElement;
+    target.id == "overlay" && setUser(null);
   };
 
   return (
