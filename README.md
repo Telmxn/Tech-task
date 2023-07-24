@@ -25,3 +25,5 @@ Initial input data: initData.json
 - Redux Toolkit.
 - Plain CSS3 / HTML5.
 <!-- - Jest and RTL for testing. -->
+
+[Preview the website](https://tex-task-8xprtjjku-telmxn.vercel.app)
