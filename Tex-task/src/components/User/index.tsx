@@ -1,22 +1,25 @@
+import { FC } from "react";
 import style from "./user.module.css";
+import { IUser } from "../../types/user";
 
-const User = (props: {
-  name: string;
-  nickname: string;
-  photo: string;
+type IUserPreview = Pick<IUser, "name" | "nickname" | "photo">;
+
+interface IUserProps {
+  user: IUserPreview;
   showUser: (nickname: string) => void;
-}) => {
-  const { name, nickname, photo, showUser } = props;
+}
+
+const User: FC<IUserProps> = ({ user, showUser }) => {
   return (
     <div className={style.user}>
       <div className={style.leftPart}>
-        <img src={`/images/${photo}`} alt="User" />
+        <img src={`/images/${user.photo}`} alt="User" />
         <div className={style.userInfo}>
-          <p>{name}</p>
-          <span>{nickname}</span>
+          <p>{user.name}</p>
+          <span>{user.nickname}</span>
         </div>
       </div>
-      <button onClick={() => showUser(nickname)}>View</button>
+      <button onClick={() => showUser(user.nickname)}>View</button>
     </div>
   );
 };

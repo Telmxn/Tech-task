@@ -1,16 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import style from "./users.module.css";
 import { getUsers } from "../../store/actions/userThunk";
 import { useAppDispatch, useAppSelector } from "../../store";
 import { IUser } from "../../types/user";
-import User from "../User";
-import UserDetail from "../UserDetail";
+import { User, UserDetail } from "..";
 import { extractLocalUser } from "../../utils/extractLocalUser";
 import { isUser } from "../../utils/typeGuards";
 
-const Users = () => {
-  const [showAll, setShowAll] = useState(false);
+const Users: FC = () => {
+  const [showAll, setShowAll] = useState<boolean>(false);
   const [user, setUser] = useState<IUser | null>(null);
   const { users } = useAppSelector((state) => state.users);
   const dispatch = useAppDispatch();
@@ -33,28 +32,11 @@ const Users = () => {
     <>
       <div className={style.users}>
         {users.slice(0, showAll == false ? 3 : undefined).map((user: IUser) => {
-          return (
-            <User
-              key={user.nickname}
-              name={user.name}
-              nickname={user.nickname}
-              photo={user.photo}
-              showUser={showUser}
-            />
-          );
+          return <User key={user.nickname} user={user} showUser={showUser} />;
         })}
         {showAll || <button onClick={() => setShowAll(true)}>View all</button>}
       </div>
-      {user && (
-        <UserDetail
-          name={user.name}
-          photo={user.photo}
-          position={user.position}
-          phone={user.phone}
-          email={user.email}
-          setUser={setUser}
-        />
-      )}
+      {user && <UserDetail user={user} setUser={setUser} />}
     </>
   );
 };

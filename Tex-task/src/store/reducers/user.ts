@@ -15,7 +15,7 @@ export const userSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getUsers.fulfilled, (state, action) => {
-        state.users = action.payload as IUser[];
+        state.users = action.payload;
         state.status = "fullfilled";
       })
       .addCase(getUsers.pending, (state) => {
